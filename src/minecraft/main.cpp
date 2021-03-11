@@ -1,18 +1,22 @@
 #include "../engine/glf.h"
 
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-
-#include "game.h"
+#include <iostream>
 
 int main()
 {
-    Game* game = new Game();
+    engine::Application::Config config;
+    config.width = 720;
+    config.height = 720;
+    config.title = "OpenGL Minecraft";
 
-    engine::Application application;
-	application.InitializeWindow(720, 720, "OpenGL Window");
-    application.AddUpdatable(game);
-    application.Start();
+    engine::Application app;
+    if (!app.Initialize(config))
+    {
+        std::cout << "Application initialization failed." << std::endl;
+        std::exit(-1);
+    }
+
+    app.Start();
 
     return 0;
 }

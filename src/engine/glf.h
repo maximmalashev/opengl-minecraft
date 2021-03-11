@@ -5,6 +5,7 @@
 
 #include "common/application.h"
 #include "common/updatable.h"
+#include "common/window.h"
 
 #include "rendering/material.h"
 #include "rendering/renderer.h"

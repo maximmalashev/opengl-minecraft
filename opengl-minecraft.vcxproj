@@ -165,6 +165,7 @@
   <ItemGroup>
     <ClCompile Include="deps\stb_image\stb_image.cpp" />
     <ClCompile Include="src\engine\common\application.cpp" />
+    <ClCompile Include="src\engine\common\window.cpp" />
     <ClCompile Include="src\engine\rendering\buffers\ibo.cpp" />
     <ClCompile Include="src\engine\rendering\buffers\vao.cpp" />
     <ClCompile Include="src\engine\rendering\buffers\vbo.cpp" />
@@ -174,13 +175,13 @@
     <ClCompile Include="src\engine\rendering\shader.cpp" />
     <ClCompile Include="src\engine\rendering\texture.cpp" />
     <ClCompile Include="src\engine\rendering\transform.cpp" />
-    <ClCompile Include="src\minecraft\game.cpp" />
     <ClCompile Include="src\minecraft\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deps\stb_image\stb_image.h" />
     <ClInclude Include="src\engine\common\application.h" />
     <ClInclude Include="src\engine\common\updatable.h" />
+    <ClInclude Include="src\engine\common\window.h" />
     <ClInclude Include="src\engine\glf.h" />
     <ClInclude Include="src\engine\rendering\buffers\ibo.h" />
     <ClInclude Include="src\engine\rendering\buffers\vao.h" />
@@ -191,7 +192,6 @@
     <ClInclude Include="src\engine\rendering\shader.h" />
     <ClInclude Include="src\engine\rendering\texture.h" />
     <ClInclude Include="src\engine\rendering\transform.h" />
-    <ClInclude Include="src\minecraft\game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

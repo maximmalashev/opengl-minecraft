@@ -7,6 +7,7 @@
 
 #include "../rendering/renderer.h"
 #include "updatable.h"
+#include "window.h"
 
 
 namespace engine {
@@ -14,21 +15,26 @@ namespace engine {
 	class Application 
 	{
 	public:
-		bool InitializeWindow(int width, int height, std::string title);
+
+		struct Config
+		{
+			int width = 0, height = 0;
+			std::string title = "OpenGL Window";
+		};
+
+		bool Initialize(const Config& config);
 		void Start();
 
-		void AddRenderer(Renderer* renderer);
-		void RemoveRenderer(Renderer* renderer);
+		void AddRenderer(Renderer& renderer);
+		void RemoveRenderer(Renderer& renderer);
 
-		void AddUpdatable(Updatable* updatable);
-		void RemoveUpdatable(Updatable* updatable);
+		void AddUpdatable(Updatable& updatable);
+		void RemoveUpdatable(Updatable& updatable);
 	private:
-		GLFWwindow* m_window;
+		Window* m_window = nullptr;
 
-		std::vector<Renderer*> renderers;
-		std::vector<Updatable*> updatables;
-
-		int m_width, m_height;
+		std::vector<Renderer*> m_renderers;
+		std::vector<Updatable*> m_updatables;
 	};
 
 }

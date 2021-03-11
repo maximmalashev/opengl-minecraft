@@ -48,10 +48,10 @@
     <ClCompile Include="deps\stb_image\stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\minecraft\game.cpp">
+    <ClCompile Include="src\minecraft\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\minecraft\main.cpp">
+    <ClCompile Include="src\engine\common\window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,7 +95,7 @@
     <ClInclude Include="src\engine\common\updatable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\minecraft\game.h">
+    <ClInclude Include="src\engine\common\window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
